@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/picture">
+        <file>background.png</file>
+        <file>enemy.png</file>
+        <file>homePage.jpg</file>
+        <file>people.png</file>
+        <file>people0.png</file>
+        <file>startGame.png</file>
+        <file>tower.png</file>
+        <file>towerbase.png</file>
+    </qresource>
+</RCC>
