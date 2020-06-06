@@ -50,3 +50,4 @@ FORMS += \
 
 RESOURCES += \
     game.qrc
+

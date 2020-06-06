@@ -23,7 +23,7 @@ public:
     ~MainWindow();
     void paintEvent(QPaintEvent *event);
 protected slots:
-    void on_startGame_clicked();
+    void on_version_easy_clicked();
 
 private:
     Ui::MainWindow *ui;

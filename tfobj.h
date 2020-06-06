@@ -23,7 +23,7 @@ public:
     int getHitPoint(){return hitPoint;}
 
     void show(QPainter * painter);//绘制obj
-    void initObj(string name);//获得初始坐标+图片+图片大小(依据每个物体的名字来初始化)
+    void initObj(string name,int x,int y);//获得初始坐标+图片+图片大小(依据每个物体的名字来初始化)
 private:
     int _x,_y;
     int _length,_width;

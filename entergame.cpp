@@ -3,6 +3,7 @@
 #include <QTimer>
 #include <QIcon>
 #include <iostream>
+#include <sstream>
 
 static int birthnum=1;
 
@@ -12,7 +13,7 @@ enterGame::enterGame(QWidget *parent) :
 {
     ui->setupUi(this);
     tfgame.initWorld();
-    setFixedSize(1000,260);//设置窗体大小为固定值，后续根据需要再改进
+    setFixedSize(960,640);//设置窗体大小为固定值，后续根据需要再改进
 
     timer = new QTimer(this);
     connect(timer,SIGNAL(timeout()),this,SLOT(PaintEnemyMove()));
@@ -26,15 +27,28 @@ enterGame::enterGame(QWidget *parent) :
     connect(attacktime,SIGNAL(timeout()),this,SLOT(Tower_LaunchAttack()));
 
 
-    QIcon ico(":/picture/towerbase.png");
-    ui->setTower0->setIcon(ico);
-    ui->setTower0->setIconSize(QSize(50,30));
-    ui->setTower0->setFlat(true);
-    ui->setTower0->setGeometry(500,130,50,30);
+    QIcon towerbase(":/picture/towergame/building.png");
+    string tower_position="320 280 320 320 370 280";
+    /*_towerBase.push_back(new QPushButton(this));
+    for(int i=0;i<3;i++){
+        int x,y;
+        string tmp=tower_position.substr(8*i,7);
+        istringstream istrStream(tmp);
+        istrStream>>x>>y;
+        tower_set[i].setIcon(towerbase);
+        tower_set[i].setIconSize(QSize(50,30));
+        tower_set[i].setFlat(true);
+        tower_set[i].setGeometry(x,y,50,30);
+        connect(setTower[i],&QPushButton::clicked,this,[=](){
+            this->tfgame.setTower(x,y);
+            this->repaint();
+            attacktime->start(1000);//在存在炮台的时候才能开始计时开始调用underAttack
+        });
+    }*/
    /* gameTime = new QTimer(this);
     gameTime->start(30000);*/
 
-    connect(ui->setTower0,SIGNAL(clicked()),this,SLOT(on_setTower0_clicked()));
+
 }
 
 enterGame::~enterGame()
@@ -70,10 +84,4 @@ void enterGame::PaintEnemyBirth(){
 void enterGame::Tower_LaunchAttack(){
     this->tfgame.launchAttack(500,100,100,10);
     this->repaint();
-}
-void enterGame::on_setTower0_clicked()
-{
-    this->tfgame.setTower(500,100);
-    this->repaint();
-    attacktime->start(1000);//在存在炮台的时候才能开始计时开始调用underAttack
 }

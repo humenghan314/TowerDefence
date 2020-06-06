@@ -8,13 +8,19 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     setFixedSize(960,540);
 
-    QIcon ico(":/picture/startGame.png");
-    ui->startGame->setIcon(ico);
-    ui->startGame->setIconSize(QSize(200,100));
-    ui->startGame->setFlat(true);
-    ui->startGame->setGeometry(380,360,200,100);
+    QIcon ico(":/picture/version_easy.png");
+    ui->version_easy->setIcon(ico);
+    ui->version_easy->setIconSize(QSize(200,100));
+    ui->version_easy->setFlat(true);
+    ui->version_easy->setGeometry(380,300,200,100);
 
-    connect(ui->startGame,SIGNAL(clicked()),this,SLOT(on_startGame_clicked()));
+    QIcon ico2(":/picture/version_hard.png");
+    ui->version_hard->setIcon(ico2);
+    ui->version_hard->setIconSize(QSize(200,100));
+    ui->version_hard->setFlat(true);
+    ui->version_hard->setGeometry(380,400,200,100);
+
+    connect(ui->version_easy,SIGNAL(clicked()),this,SLOT(on_version_easy_clicked()));
 }
 void MainWindow::paintEvent(QPaintEvent *){
     QPainter *painter;
@@ -29,7 +35,8 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-void MainWindow::on_startGame_clicked(){
+void MainWindow::on_version_easy_clicked()
+{
     this->hide();
     game_one.show();
 }

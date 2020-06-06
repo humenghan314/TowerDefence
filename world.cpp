@@ -11,22 +11,17 @@ World::~World(){
     }
 }
 void World::initWorld(){
-    this->_background.load(":/picture/background.png");
-    this->_background=this->_background.scaled(1000,260,Qt::KeepAspectRatio);//缩放背景图片大小，后续据需要更改
-    this->_people->initObj("people0");
-
-    Enemy* p=new Enemy;
-    p->initObj("enemy");
-    _enemy.push_back(p);
+    this->_background.load(":/picture/towergame/map_two.jpg");
+    this->_people->initObj("people",840,210);
 }
 void World::initEnemy(){
     Enemy* p=new Enemy;
-    p->initObj("enemy");
+    p->initObj("enemy",0,396);
     _enemy.push_back(p);
 }
 void World::setTower(int x, int y){
     Tower* p=new Tower;
-    p->initObj(x,y,"tower");
+    p->initObj("ArrowTower",x,y);
     _tower.push_back(p);
 }
 void World::showWorld(QPainter *painter){

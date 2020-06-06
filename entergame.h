@@ -6,7 +6,8 @@
 #include <QTimer>
 #include <QPainter>
 #include <QImage>
-
+#include <QPushButton>
+#include <vector>
 namespace Ui {
 class enterGame;
 }
@@ -23,7 +24,6 @@ protected slots:
     void PaintEnemyMove();//绘制随时间变化敌人的移动
     void PaintEnemyBirth();
     //void GameOver();//当
-    void on_setTower0_clicked();
     void Tower_LaunchAttack();
 private:
     Ui::enterGame *ui;

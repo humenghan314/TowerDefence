@@ -5,7 +5,6 @@
 class Tower:public TFObj{
 public:
     Tower();
-    void initObj(int x,int y,string name);
     void showArea(QPainter *painter);
 private:
     int radius;//aoe攻击半径
