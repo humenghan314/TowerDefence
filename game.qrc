@@ -1,13 +1,19 @@
 <RCC>
     <qresource prefix="/picture">
-        <file>towergame/ArrowTower_one.png</file>
-        <file>towergame/building.png</file>
-        <file>towergame/people.png</file>
-        <file>towergame/shielder.png</file>
         <file>homePage.jpg</file>
         <file>version_easy.png</file>
         <file>version_hard.png</file>
+        <file>towergame/airForce.png</file>
+        <file>towergame/ArrowTower.png</file>
+        <file>towergame/building.png</file>
+        <file>towergame/DebuffTower.png</file>
+        <file>towergame/knight.png</file>
         <file>towergame/map_one.jpg</file>
         <file>towergame/map_two.jpg</file>
+        <file>towergame/people.png</file>
+        <file>towergame/shielder.png</file>
+        <file>lose.png</file>
+        <file>win.png</file>
+        <file>returnGame.png</file>
     </qresource>
 </RCC>

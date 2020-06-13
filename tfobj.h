@@ -18,12 +18,15 @@ public:
 
     void setLen(int len){_length=len;}
     void setWid(int wid){_width=wid;}
+    int getLen(){return _length;}
+    int getWid(){return _width;}
 
     void setHitPoint(int hp){this->hitPoint=hp;}
     int getHitPoint(){return hitPoint;}
 
-    void show(QPainter * painter);//绘制obj
+    virtual void show(QPainter * painter);//绘制obj
     void initObj(string name,int x,int y);//获得初始坐标+图片+图片大小(依据每个物体的名字来初始化)
+    virtual ~TFObj(){}
 private:
     int _x,_y;
     int _length,_width;

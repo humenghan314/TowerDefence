@@ -7,7 +7,6 @@
 #include <QTimer>
 #include <QPainter>
 #include <QPushButton>
-#include <QImage>
 
 
 namespace Ui {
@@ -24,10 +23,11 @@ public:
     void paintEvent(QPaintEvent *event);
 protected slots:
     void on_version_easy_clicked();
-
+    void on_version_hard_clicked();
+    void reshow();
 private:
     Ui::MainWindow *ui;
-    enterGame game_one;
+    enterGame* game_one;
 };
 
 #endif // MAINWINDOW_H

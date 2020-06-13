@@ -26,27 +26,32 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    bullet.cpp \
     enemy.cpp \
     people.cpp \
     tfobj.cpp \
     tower.cpp \
     world.cpp \
-    entergame.cpp
+    entergame.cpp \
+    variedtower.cpp \
+    variedenemy.cpp \
+    gameover.cpp
 
 HEADERS += \
         mainwindow.h \
-    bullet.h \
     enemy.h \
     people.h \
     tfobj.h \
     tower.h \
     world.h \
-    entergame.h
+    entergame.h \
+    variedtower.h \
+    variedenemy.h \
+    gameover.h
 
 FORMS += \
         mainwindow.ui \
-    entergame.ui
+    entergame.ui \
+    gameover.ui
 
 RESOURCES += \
     game.qrc
