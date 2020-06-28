@@ -1,19 +1,26 @@
 <RCC>
     <qresource prefix="/picture">
         <file>homePage.jpg</file>
+        <file>lose.png</file>
+        <file>returnGame.png</file>
         <file>version_easy.png</file>
         <file>version_hard.png</file>
-        <file>towergame/airForce.png</file>
+        <file>win.png</file>
         <file>towergame/ArrowTower.png</file>
         <file>towergame/building.png</file>
         <file>towergame/DebuffTower.png</file>
         <file>towergame/knight.png</file>
         <file>towergame/map_one.jpg</file>
         <file>towergame/map_two.jpg</file>
+        <file>towergame/money.png</file>
         <file>towergame/people.png</file>
+        <file>towergame/shield.png</file>
         <file>towergame/shielder.png</file>
-        <file>lose.png</file>
-        <file>win.png</file>
-        <file>returnGame.png</file>
+    </qresource>
+    <qresource prefix="/sound">
+        <file>towergame/LoadingBgm.mp3</file>
+        <file>towergame/LoseMusic.mp3</file>
+        <file>towergame/WinMusic.mp3</file>
+        <file>towergame/BattleBgm.mp3</file>
     </qresource>
 </RCC>

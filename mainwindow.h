@@ -7,7 +7,7 @@
 #include <QTimer>
 #include <QPainter>
 #include <QPushButton>
-
+#include <QMultimedia>
 
 namespace Ui {
 class MainWindow;
@@ -24,10 +24,11 @@ public:
 protected slots:
     void on_version_easy_clicked();
     void on_version_hard_clicked();
-    void reshow();
 private:
     Ui::MainWindow *ui;
-    enterGame* game_one;
+    enterGame * game_one;
+    enterGame * game_two;
+    QMediaPlayer * music;
 };
 
 #endif // MAINWINDOW_H

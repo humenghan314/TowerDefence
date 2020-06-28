@@ -12,6 +12,10 @@ public:
     void setY(int y){_y=y;}
     int getX(){return _x;}
     int getY(){return _y;}
+    void setDamageX(double x){damage_x=x;}
+    void setDamageY(double y){damage_y=y;}
+    double getDamageX(){return damage_x;}
+    double getDamageY(){return damage_y;}
 
     void setName(string name){_name=name;}
     void setPicture(QImage pic){_picture=pic;}
@@ -29,6 +33,7 @@ public:
     virtual ~TFObj(){}
 private:
     int _x,_y;
+    int damage_x,damage_y;
     int _length,_width;
     QImage _picture;
     string _name;

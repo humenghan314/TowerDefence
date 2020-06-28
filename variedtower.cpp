@@ -1,11 +1,9 @@
 #include "variedtower.h"
 
 ArrowTower::ArrowTower(){
-    this->setRadius(90);
-    this->damageValue=10;
+    this->damageValue=5;
 }
 
 DebuffTower::DebuffTower(){
-    this->setRadius(90);
     this->decreaseValue=30;
 }
